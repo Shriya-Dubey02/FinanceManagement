@@ -15,9 +15,12 @@ import lombok.NoArgsConstructor;
 public class Income {
 	@Id
 	private String incomeId;
-	private User userId;
+	@ManyToOne
+	private User user;
 	@ManyToOne
 	private Account account;
+	
+	private int initialBalance;
 	
 
 }

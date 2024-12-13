@@ -20,7 +20,7 @@ public class Account {
 	
 	private String accountType;
 	
-	private int initialBalance;
+	
 	@OneToMany(cascade = CascadeType.ALL,mappedBy = "account")
 	private List<Income> incomes;
 	

@@ -1,10 +1,14 @@
 package com.learn.Finance.entity;
 
+import java.util.List;
+
+import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.OneToMany;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Pattern;
@@ -38,6 +42,9 @@ public class User {
 	private String firstName;
 	@Column(nullable = false)
 	private String lastName;
+	
+	@OneToMany(cascade = CascadeType.ALL,mappedBy = "user")
+	List<Income> incomes;
 	
 
 }
