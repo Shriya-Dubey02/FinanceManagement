@@ -24,6 +24,8 @@ public class Account {
 	@OneToMany(cascade = CascadeType.ALL,mappedBy = "account")
 	private List<Income> incomes;
 	
+	@OneToMany(cascade = CascadeType.ALL, mappedBy = "account")
+	List<Expense> expense;
 	
 
 }
