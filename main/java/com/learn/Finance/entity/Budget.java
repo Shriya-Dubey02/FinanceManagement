@@ -25,6 +25,8 @@ public class Budget {
     
     @ManyToOne
     private User user;
+    
+    
 	
 	
 	

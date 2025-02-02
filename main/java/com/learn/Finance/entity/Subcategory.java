@@ -31,5 +31,6 @@ public class Subcategory {
 	private List<Expense> expense;
 	@OneToMany(cascade = CascadeType.ALL, mappedBy = "subcategory")
 	private List<Budget> budgets;
+	private String categoryImage; 
 
 }
